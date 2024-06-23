@@ -1,0 +1,33 @@
+nav{
+    height: 10vh;
+    margin: 0px 5vh 0px 5vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    .logo{
+        img{
+            height: 2.5rem;
+            margin-right: 1rem;
+        }
+        display: flex;
+        align-items: center;
+        font-size: 1.25rem;
+        font-weight: 600;
+        grid-column: 1/ span 2;
+    }
+    .time{
+        grid-column: 3/ span 3;
+        display: flex;
+        align-items: center;
+    } 
+    .right{
+        grid-column: 8/ span 5;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        li, .lang, .contact{
+            font-size: 1rem;
+            list-style-type: none;
+            margin-left: 5px;
+        }
+    }
+}
