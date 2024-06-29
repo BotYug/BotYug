@@ -55,7 +55,7 @@ html.lenis, html.lenis body {
 }
 .mouse svg path {
   fill: none;
-  stroke-width: 10;
+  stroke-width: 12;
   mix-blend-mode: difference;
   background-color: #f5f5f5;
   stroke-linecap: round;
@@ -303,14 +303,14 @@ footer {
   grid-template-rows: 2fr 2fr 2fr 0.1fr;
 }
 footer .logo {
-  grid-column: 1/span 4;
+  grid-column: 1/span 6;
   grid-row: 1/span 3;
   font-size: 5rem;
   font-weight: 600;
 }
 footer .address {
   text-align: right;
-  grid-column: 9/span 1;
+  grid-column: 8/span 2;
   grid-row: 1/span 3;
 }
 footer .links {

@@ -6,14 +6,14 @@ footer{
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 2fr 2fr 2fr 0.1fr;
     .logo{
-        grid-column: 1 / span 4;
+        grid-column: 1 / span 6;
         grid-row: 1 / span 3;
         font-size: 5rem;
         font-weight: 600;
     }
     .address{
         text-align: right;
-        grid-column: 9 / span 1;
+        grid-column: 8 / span 2;
         grid-row: 1 / span 3;
     }
     .links{
