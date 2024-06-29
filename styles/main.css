@@ -7,6 +7,7 @@
 }
 
 body {
+  margin-top: -1rem;
   background-color: #f5f5f5;
 }
 
@@ -14,17 +15,66 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+.mouse {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  z-index: -10;
+  pointer-events: none;
+  background-color: #f5f5f5;
+}
+.mouse svg {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: -11;
+  pointer-events: none;
+}
+.mouse svg path {
+  fill: none;
+  stroke-width: 10;
+  mix-blend-mode: difference;
+  background-color: #f5f5f5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
 .background {
+  display: flex;
+  align-items: flex-end;
   margin-top: -1rem;
   height: 99vh;
   width: 99.5%;
   position: fixed;
   z-index: -1;
-  filter: blur(50px);
+  filter: blur(120px);
   background-color: rgba(245, 245, 245, 0.5);
 }
 .background .border {
-  height: 15px;
+  height: 18px;
   width: 100%;
   background-color: blue;
   animation: borderColorAnimation 10s linear infinite;
@@ -32,19 +82,24 @@ body::-webkit-scrollbar {
 @keyframes borderColorAnimation {
   0% {
     background-color: blue;
+    height: 50px;
   }
   25% {
-    background-color: black;
+    background-color: green;
+    height: 75px;
   }
   50% {
-    background-color: black;
+    background-color: orangered;
+    height: 75px;
   }
   100% {
     background-color: blue;
+    height: 50px;
   }
 }
 
 nav {
+  padding-top: 1rem;
   margin: 1rem 5vh 0px 5vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -81,9 +136,12 @@ nav .right .menu li {
   list-style-type: none;
   margin-top: 5px;
   transition: all 0.15s ease-in-out;
+  color: #757575;
+  cursor: pointer;
 }
 nav .right .menu li:hover {
-  margin-left: 0.5rem;
+  margin-left: 0.25rem;
+  color: blue;
 }
 nav .right .switch {
   margin-right: 2rem;
@@ -117,11 +175,14 @@ nav .right .contact img {
   height: 0.65rem;
   margin-left: -0.4rem;
 }
+nav .right .contact:hover {
+  background-color: blue;
+}
 
 .landingSection {
   height: 85vh;
   position: relative;
-  margin: 10vh 5vh 0px 5vh;
+  margin: 15vh 5vh 0px 5vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -135,9 +196,9 @@ nav .right .contact img {
   align-items: flex-end;
 }
 .landingSection .preHeroText h3 {
-  font-family: "Montserrat", sans-serif;
   font-size: 1.125rem;
   font-weight: 700;
+  color: #757575;
 }
 .landingSection .landingSectionContainer {
   grid-row: 2/span 2;
@@ -152,18 +213,21 @@ nav .right .contact img {
   font-size: 7.5rem;
   font-weight: 700;
   letter-spacing: 0.15rem;
+  mix-blend-mode: difference;
+  color: #f5f5f5;
 }
 .landingSection .landingSectionContainer h1 .headerFullStop img {
   height: 5.3rem;
   mix-blend-mode: difference;
 }
 .landingSection .landingSectionContainer p {
-  margin-top: -3rem;
+  margin-top: -4.5rem;
   grid-column: 1/span 2;
   font-size: 1.125rem;
+  color: #757575;
 }
 .landingSection .landingSectionContainer .CTAContainer {
-  margin-top: -4rem;
+  margin-top: -8.5rem;
   grid-column: 1/span 3;
   grid-row: 3/span 1;
   display: flex;
@@ -188,25 +252,93 @@ nav .right .contact img {
 
 .videoLanding {
   position: relative;
-  height: 80vh;
-  margin: -7.5vh 5vh 0px 5vh;
+  height: 90vh;
+  margin: -15vh 0vh 0px 0vh;
   background-color: #161616;
+  overflow: hidden;
 }
 .videoLanding .landingVideo {
   position: relative;
 }
+.videoLanding img {
+  width: 100%;
+}
+
+.brandIntro {
+  height: 85vh;
+  position: relative;
+  margin: 10vh 5vh 0px 5vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.brandIntro h5 {
+  grid-row: 3/span 2;
+  grid-column: 3/span 8;
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.services {
+  height: 85vh;
+  position: relative;
+  margin: 10vh 5vh 0px 5vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+}
+.services h3 {
+  grid-row: 3/span 2;
+  grid-column: 3/span 8;
+  font-size: 2rem;
+  font-weight: 400;
+}
 
 footer {
-  margin-top: 20vh;
+  height: 30vh;
+  position: relative;
+  margin: 15vh 5vh 0px 5vh;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: 2fr 2fr 2fr 0.1fr;
+}
+footer .logo {
+  grid-column: 1/span 4;
+  grid-row: 1/span 3;
+  font-size: 5rem;
+  font-weight: 600;
+}
+footer .address {
+  text-align: right;
+  grid-column: 9/span 1;
+  grid-row: 1/span 3;
+}
+footer .links {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  align-items: flex-end;
+  grid-column: 11/span 2;
+  grid-row: 1/span 3;
 }
 footer .social {
-  padding: 5vh;
-  background-color: #161616;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  list-style-type: none;
+  grid-column: 1/span 4;
+  grid-row: 3/span 3;
 }
 footer .social li {
+  font-weight: 400;
+  margin-right: 1rem;
+}
+footer .additionalLinks {
+  display: flex;
+  justify-content: flex-end;
   list-style-type: none;
-  color: white;
+  grid-column: 11/span 4;
+  grid-row: 3/span 3;
+}
+footer .additionalLinks li {
+  font-weight: 400;
+  margin-left: 1rem;
 }/*# sourceMappingURL=main.css.map */

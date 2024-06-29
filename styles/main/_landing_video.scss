@@ -1,9 +1,13 @@
 .videoLanding{
     position: relative;
-    height: 80vh;
-    margin: -7.5vh 5vh 0px 5vh;
+    height: 90vh;
+    margin: -15vh 0vh 0px 0vh;
     background-color: #161616;
+    overflow: hidden;
     .landingVideo{
         position: relative;
+    }
+    img{
+        width: 100%;
     }
 }

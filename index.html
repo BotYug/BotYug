@@ -3,17 +3,28 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.5/dist/lenis.min.js"></script> 
+    <script src="./script.js" defer></script>
     <link rel="stylesheet" href="./styles/main.css">
     <title>BOTYUG</title>
 </head>
 <body>
-    <div class="background">
+    <!-- <div class="background">
         <div class="border"></div>
+    </div> -->
+    <div class="mouse">
+        <svg><path d="" class="trail" style="stroke: skyblue"></path></svg>
+        <svg><path d="" class="trail" style="stroke: royalblue"></path></svg>
+        <svg><path d="" class="trail" style="stroke: blue"></path></svg>
+        <svg><path d="" class="trail" style="stroke: rgb(0, 0, 135)"></path></svg>
+        <svg><path d="" class="trail" style="stroke: rgb(0, 0, 63)"></path></svg>
+        <svg><path d="" class="trail" style="stroke: black"></path></svg>
     </div>
     <nav>
         <div class="logo">
             <img src="./icon/icon_512.png" alt="logo">
-            <a href="#">BOTYUG.AI</a>
+            <a href="#">BotYUG<span style="color: blue;">.AI</span></a>
         </div>
         <div class="mobile"></div>
         <div class="right">
@@ -52,13 +63,33 @@
     </div>
     <div class="videoLanding">
         <!-- <video src="assets/stockVideo.mp4" class="landingVideo"></video> -->
+         <img src="./assets/image2.jpg" alt="coverImage">
+    </div>
+    <div class="brandIntro">
+        <h5>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, odit! Minima ratione quisquam optio voluptatem veniam vitae nesciunt molestias voluptates sit earum facere, consectetur numquam? Facilis quod quasi voluptates quae.</h5>
+    </div>
+    <div class="services">
+        <h3>SERVICES</h3>
+        <div class="card"></div>
     </div>
     <footer>
+        <div class="logo">© BotYUG<span style="color: blue;">.AI</span></div>
+        <div class="address">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ullam, tempora.</div>
+        <div class="links">
+            <li>SERVICES</li>
+            <li>OUR WORK</li>
+            <li>ABOUT</li>
+            <li>STORIES</li>
+        </div>
         <div class="social">
             <li>Facebook</li>
             <li>Linkedin</li>
             <li>Github</li>
             <li>Email</li>
+        </div>
+        <div class="additionalLinks">
+            <li>Privacy Policy</li>
+            <li>FAQ</li>
         </div>
     </footer>
 </body>
