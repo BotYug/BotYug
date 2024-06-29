@@ -1,33 +1,87 @@
 nav{
-    height: 10vh;
-    margin: 0px 5vh 0px 5vh;
+    // height: 10vh;
+    margin: 1rem 5vh 0px 5vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    .logo{
-        img{
-            height: 2.5rem;
-            margin-right: 1rem;
-        }
+    .logo{        
         display: flex;
         align-items: center;
-        font-size: 1.25rem;
-        font-weight: 600;
         grid-column: 1/ span 2;
+        img{
+            height: 2rem;
+            margin-right: 1.25rem;
+        }
+        a{
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Roboto Mono';
+            text-decoration: none;
+        }
     }
-    .time{
-        grid-column: 3/ span 3;
-        display: flex;
-        align-items: center;
-    } 
+    // .time{
+    //     grid-column: 3/ span 3;
+    //     display: flex;
+    //     align-items: center;
+    //     font-size: 0.85rem;
+    // } 
     .right{
         grid-column: 8/ span 5;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        li, .lang, .contact{
-            font-size: 1rem;
-            list-style-type: none;
-            margin-left: 5px;
+        // display: flex;
+        // align-items: center;
+        // justify-content: space-between;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        .menu{
+            grid-column: 1/ span 3;
+
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            li{
+                font-size: 0.85rem;
+                font-weight: 500;
+                list-style-type: none;
+                margin-top: 5px;
+                transition: all 0.15s ease-in-out;
+            }
+            li:hover{
+                // background-color: #161616;
+                // color: #f5f5f5;
+                margin-left: 0.5rem;
+            }
+        }
+        .switch{
+            margin-right: 2rem;
+            // grid-column: 3/ span 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .darkModeSwitch{
+                background-color: #161616;
+                border-radius: 50%;
+                aspect-ratio: 1 / 1;
+                height: 2.25rem;
+                transition: all 0.125s ease-in-out;
+            }
+            .darkModeSwitch:hover{
+                transform: scale(1.125);
+            }
+        }
+        .contact{        
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            background-color: #161616;
+            p{
+                font-size: 0.85rem;
+                font-weight: 500;
+                margin-right: -0.4rem;
+                color: #f5f5f5;
+            }
+            img{
+                height: 0.65rem;
+                margin-left: -0.4rem;
+            }
         }
     }
 }

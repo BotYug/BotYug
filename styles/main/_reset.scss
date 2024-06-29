@@ -2,7 +2,12 @@
     border: 0px;
     padding: 0px;
     margin: 0px;
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #f5f5f5;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
     color: #161616;
+}
+body{
+    background-color: #f5f5f5;
+}
+body::-webkit-scrollbar{
+    display: none;
 }

@@ -1,20 +1,20 @@
 .landingSection{
     height: 85vh;
     position: relative;
-    margin: 0px 5vh 0px 5vh;
+    margin: 10vh 5vh 0px 5vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 1fr 1fr 1fr 1fr;
     .preHeroText{
         grid-row: 2 / span 1;
         grid-column: 1 / span 2;
-        margin: 1.5rem;
+        margin: 1.75rem;
         display: flex;
         flex-flow: column;
         align-items: flex-end;
         h3{
-            font-family: "Montserrat", sans-serif;
-            font-size: 1.5rem;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 1.125rem;
             font-weight: 700;
         }
     }
@@ -27,19 +27,23 @@
         h1{
             grid-column: 1 / span 4;
             font-family: "Montserrat", sans-serif;
-            font-size: 9rem;
-            // .headerFullStop{
-            //     line-height: 12rem;
-            //     font-size: 54rem;
-            // }
+            font-size: 7.5rem;
+            font-weight: 700;
+            letter-spacing: 0.15rem;
+            .headerFullStop{
+                img{
+                    height: 5.3rem;
+                    mix-blend-mode: difference;
+                }
+            }
         }
         p{
-            margin-top: -2.5rem;
+            margin-top: -3rem;
             grid-column: 1 / span 2;
-            font-size: 1.25rem;
-            // margin-bottom: 1.25rem;
+            font-size: 1.125rem;
         }
         .CTAContainer{ 
+            margin-top: -4rem;
             grid-column: 1 / span 3;
             grid-row: 3 / span 1;
             display: flex;
@@ -47,7 +51,6 @@
             .CTAPrimary, .CTASecondary{
                 height: 2.75rem;
                 width: 7.5rem;
-                border-radius: 0.25rem;
                 font-size: 1rem;
                 display: flex;
                 justify-content: center;

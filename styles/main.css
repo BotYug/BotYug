@@ -2,49 +2,126 @@
   border: 0px;
   padding: 0px;
   margin: 0px;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f5f5f5;
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
   color: #161616;
 }
 
+body {
+  background-color: #f5f5f5;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.background {
+  margin-top: -1rem;
+  height: 99vh;
+  width: 99.5%;
+  position: fixed;
+  z-index: -1;
+  filter: blur(50px);
+  background-color: rgba(245, 245, 245, 0.5);
+}
+.background .border {
+  height: 15px;
+  width: 100%;
+  background-color: blue;
+  animation: borderColorAnimation 10s linear infinite;
+}
+@keyframes borderColorAnimation {
+  0% {
+    background-color: blue;
+  }
+  25% {
+    background-color: black;
+  }
+  50% {
+    background-color: black;
+  }
+  100% {
+    background-color: blue;
+  }
+}
+
 nav {
-  height: 10vh;
-  margin: 0px 5vh 0px 5vh;
+  margin: 1rem 5vh 0px 5vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
 }
 nav .logo {
   display: flex;
   align-items: center;
-  font-size: 1.25rem;
-  font-weight: 600;
   grid-column: 1/span 2;
 }
 nav .logo img {
-  height: 2.5rem;
-  margin-right: 1rem;
+  height: 2rem;
+  margin-right: 1.25rem;
 }
-nav .time {
-  grid-column: 3/span 3;
-  display: flex;
-  align-items: center;
+nav .logo a {
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: "Roboto Mono";
+  text-decoration: none;
 }
 nav .right {
   grid-column: 8/span 5;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+nav .right .menu {
+  grid-column: 1/span 3;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+nav .right .menu li {
+  font-size: 0.85rem;
+  font-weight: 500;
+  list-style-type: none;
+  margin-top: 5px;
+  transition: all 0.15s ease-in-out;
+}
+nav .right .menu li:hover {
+  margin-left: 0.5rem;
+}
+nav .right .switch {
+  margin-right: 2rem;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+nav .right .switch .darkModeSwitch {
+  background-color: #161616;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  height: 2.25rem;
+  transition: all 0.125s ease-in-out;
+}
+nav .right .switch .darkModeSwitch:hover {
+  transform: scale(1.125);
+}
+nav .right .contact {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  background-color: #161616;
 }
-nav .right li, nav .right .lang, nav .right .contact {
-  font-size: 1rem;
-  list-style-type: none;
-  margin-left: 5px;
+nav .right .contact p {
+  font-size: 0.85rem;
+  font-weight: 500;
+  margin-right: -0.4rem;
+  color: #f5f5f5;
+}
+nav .right .contact img {
+  height: 0.65rem;
+  margin-left: -0.4rem;
 }
 
 .landingSection {
   height: 85vh;
   position: relative;
-  margin: 0px 5vh 0px 5vh;
+  margin: 10vh 5vh 0px 5vh;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -52,14 +129,14 @@ nav .right li, nav .right .lang, nav .right .contact {
 .landingSection .preHeroText {
   grid-row: 2/span 1;
   grid-column: 1/span 2;
-  margin: 1.5rem;
+  margin: 1.75rem;
   display: flex;
   flex-flow: column;
   align-items: flex-end;
 }
 .landingSection .preHeroText h3 {
   font-family: "Montserrat", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.125rem;
   font-weight: 700;
 }
 .landingSection .landingSectionContainer {
@@ -72,14 +149,21 @@ nav .right li, nav .right .lang, nav .right .contact {
 .landingSection .landingSectionContainer h1 {
   grid-column: 1/span 4;
   font-family: "Montserrat", sans-serif;
-  font-size: 9rem;
+  font-size: 7.5rem;
+  font-weight: 700;
+  letter-spacing: 0.15rem;
+}
+.landingSection .landingSectionContainer h1 .headerFullStop img {
+  height: 5.3rem;
+  mix-blend-mode: difference;
 }
 .landingSection .landingSectionContainer p {
-  margin-top: -2.5rem;
+  margin-top: -3rem;
   grid-column: 1/span 2;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 .landingSection .landingSectionContainer .CTAContainer {
+  margin-top: -4rem;
   grid-column: 1/span 3;
   grid-row: 3/span 1;
   display: flex;
@@ -88,7 +172,6 @@ nav .right li, nav .right .lang, nav .right .contact {
 .landingSection .landingSectionContainer .CTAContainer .CTAPrimary, .landingSection .landingSectionContainer .CTAContainer .CTASecondary {
   height: 2.75rem;
   width: 7.5rem;
-  border-radius: 0.25rem;
   font-size: 1rem;
   display: flex;
   justify-content: center;
@@ -105,10 +188,25 @@ nav .right li, nav .right .lang, nav .right .contact {
 
 .videoLanding {
   position: relative;
-  height: 100vh;
-  margin: 0px 5vh 0px 5vh;
+  height: 80vh;
+  margin: -7.5vh 5vh 0px 5vh;
   background-color: #161616;
 }
 .videoLanding .landingVideo {
   position: relative;
+}
+
+footer {
+  margin-top: 20vh;
+}
+footer .social {
+  padding: 5vh;
+  background-color: #161616;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+footer .social li {
+  list-style-type: none;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
