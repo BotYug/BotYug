@@ -4,11 +4,41 @@
     margin: 10vh 5vh 0px 5vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
     h3{
-        grid-row: 3 / span 2;
+        grid-row: 2 / span 1;
         grid-column: 3 / span 8;
-        font-size: 2rem;
-        font-weight: 400;
+        font-size: 1.6rem;
+        font-weight: 600;
     }
+    .cards{
+        grid-row: 3 / span 3;
+        grid-column: 3 / span 8;    
+        // display: grid;
+        // grid-template-columns: repeat(8, 1fr);
+        display: flex;
+        justify-content: space-between;
+        .card{
+            // height: 150px;
+            // border: 1px solid black;
+            .diagram{
+                img{
+                    height: 75px;
+                }
+            }
+            h3{
+                margin: 10px 0px 5px 0px;
+                font-size: 1.25rem;
+                font-weight: 500;
+            }
+            p{
+                font-size: 0.75rem;
+                display: inline;
+            }
+            a{
+                font-size: 0.75rem;
+            }
+        }
+    }
+
 }
